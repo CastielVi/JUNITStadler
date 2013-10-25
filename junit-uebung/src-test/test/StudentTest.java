@@ -34,7 +34,7 @@ public class StudentTest {
 		assertEquals(x.compareTo(y),1);
 	}
 	
-	public void toStringTest(){
+	public void toStringSortTest(){
 		Student x = new Student("Max","Mayer",new Date(Date.parse("11.9.2001")));
 		Student y = new Student("Lukas","NichMayer",new Date(Date.parse("14.3.1991")));
 		Student sortedfirst = null;
