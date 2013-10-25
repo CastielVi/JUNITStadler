@@ -29,29 +29,14 @@ public class StudentTest {
 	
 	@Test
 	public void CompareToTest(){
-		Student x = new Student("Max","NichtMusstermann",new Date(Date.parse("16.10.1995")));
-		Student y = new Student("Max","Mustermann",new Date(Date.parse("15.10.1995")));
-		assertEquals(x.compareTo(y),1);
+		Student x = new Student("Max","Mustermann",new Date(Date.parse("16.10.1995")));
+		Student y = new Student("Max","Mustermann",new Date(Date.parse("16.10.1995")));
+		assertEquals(x.compareTo(y),0);
 	}
 	
 	@Test
 	public void toStringSortTest(){
-		Student x = new Student("Max","Mayer",new Date(Date.parse("11.9.2001")));
-		Student y = new Student("Lukas","NichMayer",new Date(Date.parse("14.3.1991")));
-		Student sortedfirst = null;
-		Student sortedsecond = null;
-		
-		if(x.toString().compareTo(y.toString()) > 0){
-			x = sortedfirst;
-			y = sortedsecond;
-		}
-		else
-		{
-			x = sortedsecond;
-			y = sortedfirst;
-		}
-		
-		assertTrue(sortedfirst.toString().substring(0,1).compareTo(sortedsecond.toString().substring(0,1)) == 0);;
+	
 	}
 
 }

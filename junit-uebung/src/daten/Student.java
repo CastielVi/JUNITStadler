@@ -14,6 +14,18 @@ public class Student extends Person implements Comparable<Student> {
 	public Student(String firstName,String lastName,Date birthDate){
 		super(firstName, lastName);	
 	}
+	
+	public void setBirtDate(Date birthDate) {
+		if (birthDate == null) {
+			throw new IllegalArgumentException("birthDate must not be null!");
+		}
+		
+		this.birthDate = birthDate;
+	}
+	
+	public Date getBirthDate(Date birthDate) {
+		return birthDate;
+	}
 
 	private boolean selfEntitled;
 	private Date birthDate; // TODO add getter,setter,Constructors
@@ -35,6 +47,10 @@ public class Student extends Person implements Comparable<Student> {
 			}
 		}
 		return result;
+	}
+	
+	public void sortStudents(Student x , Student y){
+		
 	}
 
 	@Override
