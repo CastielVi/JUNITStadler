@@ -29,8 +29,8 @@ public class StudentTest {
 	
 	@Test
 	public void CompareToTest(){
-		Student x = new Student("Max","Mustermann",new Date(Date.parse("16.10.1995")));
-		Student y = new Student("Max","Mustermann",new Date(Date.parse("16.10.1995")));
+		Student x = new Student("Max","Mustermann",new Date(1995,10,16));
+		Student y = new Student("Max","Mustermann",new Date(1995,10,16));
 		assertEquals(x.compareTo(y),0);
 	}
 	

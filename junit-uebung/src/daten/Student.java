@@ -13,6 +13,7 @@ public class Student extends Person implements Comparable<Student> {
 	}
 	public Student(String firstName,String lastName,Date birthDate){
 		super(firstName, lastName);	
+		setBirtDate(birthDate);
 	}
 	
 	public void setBirtDate(Date birthDate) {
@@ -23,7 +24,7 @@ public class Student extends Person implements Comparable<Student> {
 		this.birthDate = birthDate;
 	}
 	
-	public Date getBirthDate(Date birthDate) {
+	public Date getBirthDate() {
 		return birthDate;
 	}
 
@@ -41,7 +42,7 @@ public class Student extends Person implements Comparable<Student> {
 		// TODO implement meaningful unit tests
 		if ((result = getLastName().compareTo(o.getLastName())) == 0) {
 			if ((result = getFirstName().compareTo(o.getFirstName())) == 0) {
-				result = birthDate.compareTo(o.birthDate); // TODO change to
+				result = getBirthDate().compareTo(o.getBirthDate()); // TODO change to
 															// getter after
 															// implementation
 			}
