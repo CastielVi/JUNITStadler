@@ -1,4 +1,7 @@
 package daten;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 public class Student extends Person implements Comparable<Student> {
@@ -50,9 +53,15 @@ public class Student extends Person implements Comparable<Student> {
 		return result;
 	}
 	
-	public void sortStudents(Student x , Student y){
-		
-	}
+	public ArrayList<Student> sortieren(ArrayList<Student> list){ 
+	Collections.sort(list, new Comparator<Student>()
+		{
+			
+	@Override 
+	public int compare(Student x, Student y) { 
+		return x.getBirthDate().compareTo(y.getBirthDate()); } });
+		return list; 
+		}
 
 	@Override
 	public String toString() {
